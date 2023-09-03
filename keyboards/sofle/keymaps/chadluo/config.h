@@ -6,3 +6,8 @@ for more options.
 */
 
 #define ENCODER_DIRECTION_FLIP
+
+#ifdef TAPPING_TERM
+#undef TAPPING_TERM
+#define TAPPING_TERM 200
+#endif
