@@ -97,9 +97,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                       ),
     /* ADJUST
      * ,-----------------------------------------.                    ,-----------------------------------------.
-     * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
+     * |      | LNG1 | LNG2 | LNG3 | LNG4 | LNG5 |                    | LNG6 | LNG7 | LNG8 | LNG9 |      |      |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-     * | QK_BOOT|      |QWERTY|COLEMAK|      |      |                    |      |      |      |      |      |      |
+     * | QK_BOOT|    |QWERTY|COLEMAK|     |      |                    |      |      |      |      |      |      |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
      * |      |      |MACWIN|      |      |      |-------.    ,-------|      | VOLDO| MUTE | VOLUP|      |      |
      * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
@@ -109,7 +109,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *            |      |      |      |      |/       /         \      \ |      |      |      |      |
      *            `----------------------------------'           '------''---------------------------'
      */
-    [_ADJUST] = LAYOUT(XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, /* */ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   //
+    [_ADJUST] = LAYOUT(XXXXXXX, KC_LNG1, KC_LNG2, KC_LNG3, KC_LNG4, KC_LNG5, /* */ KC_LNG6, KC_LNG7, KC_LNG8, KC_LNG9, XXXXXXX, XXXXXXX,                   //
                        QK_BOOT, XXXXXXX, KC_QWERTY, KC_COLEMAK, CG_TOGG, XXXXXXX, /* */ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,              //
                        XXXXXXX, XXXXXXX, CG_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, /* */ XXXXXXX, KC_VOLD, KC_MUTE, KC_VOLU, XXXXXXX, XXXXXXX,                   //
                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, /* */ XXXXXXX, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX, //
