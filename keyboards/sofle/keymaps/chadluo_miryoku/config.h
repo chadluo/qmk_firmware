@@ -30,7 +30,9 @@ XXX, K20, K21, K22, K23, K24, XXX,      XXX, K25, K26, K27, K28, K29, XXX,\
 
 #define ENCODER_DIRECTION_FLIP
 
+// clang-format off
 #ifdef ENCODER_RESOLUTION
-#    undef ENCODER_RESOLUTION
-#    define ENCODER_RESOLUTION 1
+#undef ENCODER_RESOLUTION
+#define ENCODER_RESOLUTION 2
 #endif
+// clang-format on

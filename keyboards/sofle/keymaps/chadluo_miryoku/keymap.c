@@ -16,8 +16,9 @@ bool oled_task_user(void) {
     if (is_keyboard_master()) {
         // oled_write_P(PSTR(get_highest_layer(layer_state)), false);
     } else {
-        oled_write_ln_P(PSTR("2023-10-19"), false);
-        oled_write_ln_P(PSTR("Miryoku screen encoder"), false);
+        oled_write_ln_P(PSTR("2023-10-20 Miryoku"), false);
+        oled_write_ln_P(PSTR("encoder macro mod"), false);
+        oled_write_ln_P(PSTR("switch IME"), false);
     }
     return false;
 }
@@ -37,22 +38,18 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
-        if (clockwise) {
-            tap_code(KC_VOLU);
-        } else {
-            tap_code(KC_VOLD);
-        }
+        tap_code(clockwise ? KC_VOLU : KC_VOLD);
     } else if (index == 1) {
         if (clockwise) {
-            register_mods(mod_config(MOD_LGUI));
-            register_mods(mod_config(MOD_LSFT));
+            register_code(KC_LGUI);
+            register_code(KC_LSFT);
             tap_code(KC_SPC);
-            unregister_mods(mod_config(MOD_LGUI));
-            unregister_mods(mod_config(MOD_LSFT));
+            unregister_code(KC_LGUI);
+            unregister_code(KC_LSFT);
         } else {
-            register_mods(mod_config(MOD_LGUI));
+            register_code(KC_LGUI);
             tap_code(KC_SPC);
-            unregister_mods(mod_config(MOD_LGUI));
+            unregister_code(KC_LGUI);
         }
     }
     return false;
