@@ -36,3 +36,10 @@ XXX, K20, K21, K22, K23, K24, XXX,      XXX, K25, K26, K27, K28, K29, XXX,\
 #define ENCODER_RESOLUTION 2
 #endif
 // clang-format on
+
+// clang-format off
+#ifdef TAPPING_TERM
+#undef TAPPING_TERM
+#define TAPPING_TERM 150
+#endif
+// clang-format on

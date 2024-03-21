@@ -16,9 +16,9 @@ bool oled_task_user(void) {
     if (is_keyboard_master()) {
         // oled_write_P(PSTR(get_highest_layer(layer_state)), false);
     } else {
-        oled_write_ln_P(PSTR("2023-10-20 Miryoku"), false);
-        oled_write_ln_P(PSTR("encoder macro mod"), false);
-        oled_write_ln_P(PSTR("switch IME"), false);
+        oled_write_ln_P(PSTR("2024-03-22 Miryoku"), false);
+        oled_write_ln_P(PSTR("homerow mod"), false);
+        oled_write_ln_P(PSTR("hold time"), false);
     }
     return false;
 }
