@@ -20,11 +20,11 @@
      N30, N31, K32, K33, K34,                K35, K36, K37, N38, N39\
 )\
 LAYOUT(\
-XXX, XXX, XXX, XXX, XXX, XXX,                XXX, XXX, XXX, XXX, XXX, XXX,\
-XXX, K00, K01, K02, K03, K04,                K05, K06, K07, K08, K09, XXX,\
-XXX, K10, K11, K12, K13, K14,                K15, K16, K17, K18, K19, XXX,\
-XXX, K20, K21, K22, K23, K24, XXX,      XXX, K25, K26, K27, K28, K29, XXX,\
-          XXX, XXX, K32, K33, K34,      K35, K36, K37, XXX, XXX\
+DT_PRNT, DT_UP, DT_DOWN, XXX, XXX, XXX,                XXX, XXX, XXX, XXX, XXX, XXX,\
+          XXX, K00, K01, K02, K03, K04,                K05, K06, K07, K08, K09, XXX,\
+          XXX, K10, K11, K12, K13, K14,                K15, K16, K17, K18, K19, XXX,\
+          XXX, K20, K21, K22, K23, K24, XXX,      XXX, K25, K26, K27, K28, K29, XXX,\
+                    XXX, XXX, K32, K33, K34,      K35, K36, K37, XXX, XXX\
 )
 // clang-format on
 
@@ -43,3 +43,5 @@ XXX, K20, K21, K22, K23, K24, XXX,      XXX, K25, K26, K27, K28, K29, XXX,\
 #define TAPPING_TERM 150
 #endif
 // clang-format on
+
+#define QUICK_TAP_TERM 0
