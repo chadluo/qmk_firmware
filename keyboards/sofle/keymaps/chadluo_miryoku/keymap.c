@@ -17,8 +17,8 @@ bool oled_task_user(void) {
         // oled_write_P(PSTR(get_highest_layer(layer_state)), false);
     } else {
         oled_write_ln_P(PSTR("2024-04-07 Miryoku"), false);
-        oled_write_ln_P(PSTR("different build"), false);
-        oled_write_ln_P(PSTR("remove user dir"), false);
+        oled_write_ln_P(PSTR("right encode"), false);
+        oled_write_ln_P(PSTR("switch window"), false);
     }
     return false;
 }
@@ -39,6 +39,8 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         tap_code(clockwise ? KC_VOLU : KC_VOLD);
+    } else if (index==1){
+        tap_code(LWIN(LCTL(clockwise ? KC_RGHT : KC_LEFT)));
     }
     return false;
 }
