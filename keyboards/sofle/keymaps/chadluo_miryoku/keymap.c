@@ -39,8 +39,9 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         tap_code(clockwise ? KC_VOLU : KC_VOLD);
-    } else if (index==1){
-        tap_code(LWIN(LCTL(clockwise ? KC_RGHT : KC_LEFT)));
+    } else if (index == 1) {
+        // register_code16(G(C(clockwise ? KC_RGHT : KC_LEFT)));
+        // unregister_code16(G(C(clockwise ? KC_RGHT : KC_LEFT)));
     }
     return false;
 }
