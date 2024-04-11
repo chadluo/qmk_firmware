@@ -16,9 +16,9 @@ bool oled_task_user(void) {
     if (is_keyboard_master()) {
         // oled_write_P(PSTR(get_highest_layer(layer_state)), false);
     } else {
-        oled_write_ln_P(PSTR("2024-04-07 Miryoku"), false);
-        oled_write_ln_P(PSTR("right encode"), false);
-        oled_write_ln_P(PSTR("switch window"), false);
+        oled_write_ln_P(PSTR("2024-04-11 Miryoku"), false);
+        oled_write_ln_P(PSTR("extra shift"), false);
+        oled_write_ln_P(PSTR("R4"), false);
     }
     return false;
 }
